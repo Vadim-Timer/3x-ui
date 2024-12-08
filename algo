@@ -1,0 +1,38 @@
+	1. apt-get update && apt-get full-upgrade -y && reboot
+	2. apt install docker.io docker-compose git curl bash openssl nano -y
+	3. bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+	4. Меняем версию на 2.3.15 (последняя с поддержкой warp)
+	5. openssl req -x509 -newkey rsa:4096 -nodes -sha256 -keyout /etc/ssl/private/3x-ui-private.key -out /etc/ssl/certs/3x-ui-public.key -days 3650 -subj "/CN=APP"
+	6. x-ui для вызова меню: fail2ban, bbr и прочее
+	
+	
+	Создание клиентов:
+	В настройках безопасности выбираем REALITY и жмем Get New Cert ниже.
+	Раскрываем поле "клиент" и в Flow выбираем xtls-rprx-vision
+	Dest: teamdocs.su:443 (или s3.aeza.net:443)
+	SNI teamdocs.su (или s3.aeza.net)
+	В пункте uTLS выбираем chrome
+
+Warp
+geosite:category-gov-ru,regexp:.*\.ru$,regexp:.*\.su$,geosite:openai
+	 
+	
+	
+https://ipinfo.io/
+https://2ip.ru
+
+Releases · MatsuriDayo/nekoray
+Releases · MatsuriDayo/NekoBoxForAndroid
+Thermius (Putty)
+
+
+	          Напрямую	            Прокси	          Блок
+IP	        geoip:ru	            geoip:se	
+	          geoip:private
+
+Домен	      domain:ru	            domain:io	        geosite:category-ads-all
+          	domain:su	            domain:com	      domain:firebase.io
+          	domain:рф	            domain:org	      domain:crashlytics.com
+          	domain:xn--p1ai	      domain:net
+          	domain:vk.com	        domain:youtu.be 
+	
